@@ -1,0 +1,60 @@
+#|---------------------|
+#|        PRINT        |
+#|---------------------|
+
+snippet uu "Print" i 
+print(${1:A})
+endsnippet
+
+#|---------------------|
+#|FUNCTIONS AND CLASSES|
+#|---------------------|
+
+snippet class "Class" b
+class ${1:A}:
+	'''${2:B}'''
+	def __init__(self, ${3:C}):
+		${4:D}	
+endsnippet
+
+snippet func "Function"
+def ${1:A}(${2:B}):
+	'''${3:C}'''
+	${4:D}
+endsnippet
+
+#|---------------------|
+#|IF / FOR / WHILE Loop|
+#|---------------------|
+
+snippet if "IF/ELSE"
+if ${1:A}:
+	${2:B}
+endsnippet
+
+
+snippet ie "IF/ELSE"
+if ${1:A}:
+	${2:B}
+else:
+	${3:C}
+endsnippet
+
+snippet il "IF/ELIF/ELSE"
+if ${1:A}:
+	${2:B}
+elif ${3:C}:
+	${4:D}
+else:
+	${5:E}
+endsnippet
+
+snippet for "FOR"
+for ${1:A} in ${2:B}:
+	${3:C}
+endsnippet
+
+snippet wl "WHILE"
+while ${1:A}:
+	${2:B}
+endsnippet
