@@ -24,7 +24,6 @@ nnoremap <F1> :lcd %:p:h <CR>
 	nnoremap <leader>q :q <CR>
 	nnoremap <leader>n :NERDTreeToggle <CR>
 	nnoremap <leader>t :TagbarToggle <CR>
-	autocmd BufEnter *.md exe 'nnoremap <leader>md :!open -a "Shiba" %:p<CR>'
 	autocmd GUIEnter * set t_vb=
 	autocmd GUIEnter * WToggleClean
    	imap jk <ESC> <CR>
@@ -52,7 +51,6 @@ call plug#begin('~/vim/vim80/autoload/')
 	Plug 'airblade/vim-gitgutter'
 	Plug 'dylanaraps/wal.vim'
 	Plug 'Yggdroot/indentLine'
-	Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 call plug#end()
 
@@ -64,9 +62,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set guifont=Source\ Code\ Pro:h12		"Font size change for GVim
 	set foldmethod=indent
 	let ayucolor="mirage"
-	colorscheme wal
-	" colorscheme challenger_deep
-	" colorscheme ayu
+	" colorscheme wal
 	set cursorline
 	set go-=m
 	set go-=T
