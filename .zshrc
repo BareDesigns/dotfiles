@@ -55,14 +55,6 @@ alias gc="git commit -m"
 alias gpl="git pull origin master"
 alias gpu="git push origin master"
 
-# Shpotify
-alias sz="spotify pause"
-alias sp="spotify play"
-alias sl="spotify list "
-alias sn="spotify next"
-alias sr="spotify prev"
-alias sq="spotify quit"
-
 # TaskWarrior
 alias tk="task"
 alias ta="task add"
