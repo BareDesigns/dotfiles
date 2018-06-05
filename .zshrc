@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # Set personal aliases,
 # For a full list of active aliases, run `alias`.
 
-# General Alias
+# General Aliases
 alias ls="colorls"
 alias ei="exit"
 alias tt="tmux"
