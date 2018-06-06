@@ -13,7 +13,7 @@ let g:airline_theme='simple'
 " Sets AHK Comment
 autocmd FileType autohotkey setlocal commentstring=;\ %s
 " Set R Markdown Comment Type
-autocmd FileType rmarkdown setlocal commentstring=#\ %s
+" autocmd FileType rmarkdown setlocal commentstring=#\ %s
 nnoremap <F1> :lcd %:p:h <CR>
 
 "Key Remaps

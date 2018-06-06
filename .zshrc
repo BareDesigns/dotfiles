@@ -62,3 +62,6 @@ alias taw="task add project:work"
 alias tap="task add project:personal"
 alias tas="task add project:school"
 alias tc="task context"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
