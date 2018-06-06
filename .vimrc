@@ -52,7 +52,6 @@ call plug#begin('~/vim/vim80/autoload/')
 	Plug 'ryanoasis/vim-devicons'
         Plug 'maralla/completor.vim'
 	Plug 'airblade/vim-gitgutter'
-	Plug 'dylanaraps/wal.vim'
 	Plug 'Yggdroot/indentLine'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -67,8 +66,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set nu
 	set guifont=Source\ Code\ Pro:h12		"Font size change for GVim
 	set foldmethod=indent
-	let ayucolor="mirage"
-	" colorscheme wal
 	set cursorline
 	set go-=m
 	set go-=T
