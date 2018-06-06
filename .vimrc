@@ -9,8 +9,11 @@
 "Airline Configuration
 let g:airline_theme='simple'
 
-"For use with Vim-Commenter. Sets AHK comment type
+" For use with Vim-Commentary
+" Sets AHK Comment
 autocmd FileType autohotkey setlocal commentstring=;\ %s
+" Set R Markdown Comment Type
+autocmd FileType rmarkdown setlocal commentstring=#\ %s
 nnoremap <F1> :lcd %:p:h <CR>
 
 "Key Remaps
