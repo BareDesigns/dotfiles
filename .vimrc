@@ -51,6 +51,9 @@ call plug#begin('~/vim/vim80/autoload/')
 	Plug 'airblade/vim-gitgutter'
 	Plug 'dylanaraps/wal.vim'
 	Plug 'Yggdroot/indentLine'
+	Plug 'vim-pandoc/vim-pandoc'
+	Plug 'vim-pandoc/vim-pandoc-syntax'
+	Plug 'vim-pandoc/vim-rmarkdown'
 
 call plug#end()
 
