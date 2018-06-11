@@ -48,6 +48,7 @@ alias reddit="rtv"
 alias py="python3"
 alias bb="cd -"
 alias rfo="rm -rf"
+alias vi="nvim"
 
 # GIT
 alias gs="git status"
@@ -64,4 +65,3 @@ alias tas="task add project:school"
 alias tc="task context"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-

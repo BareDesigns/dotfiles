@@ -4,6 +4,7 @@
 	set relativenumber
 	set bs=2
 	hi pythonSelf  ctermfg=68  guifg=#5f87d7 cterm=bold gui=bold
+	set background=dark
 
 
 "Airline Configuration
@@ -35,7 +36,6 @@ nnoremap <F1> :lcd %:p:h <CR>
 call plug#begin('~/vim/vim80/autoload/')
 
 	Plug 'lervag/vimtex'
-	Plug 'chriskempson/base16-vim'
 	Plug 'tmhedberg/SimpylFold' 
 	Plug 'vim-scripts/indentpython'
 	Plug 'tpope/vim-fugitive'
@@ -50,12 +50,13 @@ call plug#begin('~/vim/vim80/autoload/')
 	Plug 'majutsushi/tagbar'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
-        Plug 'maralla/completor.vim'
+    	Plug 'maralla/completor.vim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'Yggdroot/indentLine'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
+	Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
@@ -66,6 +67,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set nu
 	set guifont=Source\ Code\ Pro:h12		"Font size change for GVim
 	set foldmethod=indent
+    	colorscheme wal
 	set cursorline
 	set go-=m
 	set go-=T
@@ -122,7 +124,7 @@ set completeopt+=menuone
 	let g:tex_conceal = ''
 	let g:text_fold_enabled = 1
 	let g:text_comment_nospell = 1
-	let g:vimtex_view_general_viewer = 'SumatraPDF'
+	let g:vimtex_view_general_viewer = 'open'
 	map <F6> :setlocal spell spelllang=en_us<CR>
 	vnoremap <Space><Space> <Esc>/<Enter>"_c4l
 	map <Space><Space> <Esc>/<++><Enter>"_c4l
@@ -147,33 +149,36 @@ au BufNewFile,BufRead *.py,*ahk
     let g:ycm_autoclose_preview_window_after_completion=1
     map <leader>x :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+
+    set termguicolors
+
 "Standard_VIMRC_Information
-set diffexpr=MyDiff()
-function MyDiff()
-	  let opt = '-a --binary '
-	  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-	  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-	  let arg1 = v:fname_in
-	  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-	  let arg2 = v:fname_new
-	  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-	  let arg3 = v:fname_out
-	  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-	  if $VIMRUNTIME =~ ' '
-	    if &sh =~ '\<cmd'
-	      if empty(&shellxquote)
-		let l:shxq_sav = ''
-		set shellxquote&
-	      endif
-	      let cmd = '"' . $VIMRUNTIME . '\diff"'
-	    else
-	      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-	    endif
-	  else
-	    let cmd = $VIMRUNTIME . '\diff'
-	  endif
-	  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
-	  if exists('l:shxq_sav')
-	    let &shellxquote=l:shxq_sav
-	  endif
-endfunction
+" set diffexpr=MyDiff()
+" function MyDiff()
+" 	  let opt = '-a --binary '
+" 	  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+" 	  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+" 	  let arg1 = v:fname_in
+" 	  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+" 	  let arg2 = v:fname_new
+" 	  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+" 	  let arg3 = v:fname_out
+" 	  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+" 	  if $VIMRUNTIME =~ ' '
+" 	    if &sh =~ '\<cmd'
+" 	      if empty(&shellxquote)
+" 		let l:shxq_sav = ''
+" 		set shellxquote&
+" 	      endif
+" 	      let cmd = '"' . $VIMRUNTIME . '\diff"'
+" 	    else
+" 	      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+" 	    endif
+" 	  else
+" 	    let cmd = $VIMRUNTIME . '\diff'
+" 	  endif
+" 	  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
+" 	  if exists('l:shxq_sav')
+" 	    let &shellxquote=l:shxq_sav
+" 	  endif
+" endfunction
