@@ -49,6 +49,7 @@ alias py="python3"
 alias bb="cd -"
 alias rfo="rm -rf"
 alias vi="nvim"
+alias vrc="sudo nvim ~/.config/nvim/init.vim"
 
 # GIT
 alias gs="git status"
