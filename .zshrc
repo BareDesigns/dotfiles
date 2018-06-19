@@ -50,6 +50,7 @@ alias bb="cd -"
 alias rfo="rm -rf"
 alias vi="nvim"
 alias vrc="sudo nvim ~/.config/nvim/init.vim"
+alias gty="gtypist"
 
 # GIT
 alias gs="git status"

@@ -58,6 +58,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 
 call plug#end()
 
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 "Themes_and_Numbers
 	set nu
