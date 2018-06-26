@@ -54,7 +54,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
-	Plug 'mhartington/oceanic-next'
+	Plug 'ervandew/supertab'
 
 call plug#end()
 
