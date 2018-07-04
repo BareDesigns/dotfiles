@@ -66,4 +66,9 @@ alias tap="task add project:personal"
 alias tas="task add project:school"
 alias tc="task context"
 
+# Youtube-DL
+alias yty="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'" 
+alias ytu="youtube-dl -o '~/MyVideos/%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s'"
+alias ydl="youtube-dl "
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
