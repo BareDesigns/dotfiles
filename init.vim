@@ -4,8 +4,9 @@
 	set relativenumber
 	set laststatus=2
 	set bs=2
+	set termguicolors
 	syntax enable
-	set t_Co=256
+
 
 "For use with Vim-Commenter. Sets AHK comment type
 autocmd FileType autohotkey setlocal commentstring=;\ %s
