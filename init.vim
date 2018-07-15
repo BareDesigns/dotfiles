@@ -4,7 +4,7 @@
 	set relativenumber
 	set laststatus=2
 	set bs=2
-	set termguicolors
+	" set termguicolors
 	syntax enable
 
 
@@ -33,6 +33,7 @@ nnoremap <F1> :lcd %:p:h <CR>
 "Vim_Plug
 call plug#begin('~/.local/share/nvim/site/autoload/')
 
+	Plug 'mhartington/oceanic-next'
 	Plug 'donRaphaco/neotex', { 'for': 'tex'}
 	Plug 'roxma/nvim-completion-manager'
 	Plug 'dylanaraps/wal.vim'
@@ -65,7 +66,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set nu
 	set guifont=Source\ Code\ Pro:h12		"Font size change for GVim
 	set foldmethod=indent
-	colorscheme wal
+	" colorscheme wal
 	set cursorline
 	set go-=m
 	set go-=T
@@ -136,5 +137,5 @@ au BufNewFile,BufRead *.py,*ahk
 	\ set foldmethod=indent |
 	\ set autoindent	|
 	\ set fileformat=unix	|
-    set encoding=utf-8
-    let python_highlight_all=1
+	\ set encoding=utf-8
+	" let python_highlight_all=1
