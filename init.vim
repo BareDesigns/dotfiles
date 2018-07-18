@@ -1,10 +1,18 @@
+
+"   ██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
+"   ██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
+"   ██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
+"   ██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
+"   ██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+"   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+
+
 "Misc. Vim settings
 	set noundofile
 	set nocompatible
 	set relativenumber
 	set laststatus=2
 	set bs=2
-	" set termguicolors
 	syntax enable
 
 
@@ -15,8 +23,6 @@ nnoremap <F1> :lcd %:p:h <CR>
 "Key Remaps
 	map <Space> <leader>
 	let mapleader = "\<Space>"
-	nnoremap <leader>8 :!py % <CR>
-	nnoremap <leader>9 :w !py <CR>
 	nnoremap = :w! <CR>
 	nnoremap <LEADER>gs :Gstatus <cr>
 	nnoremap <leader>gc :Gcommit <CR>
@@ -25,7 +31,6 @@ nnoremap <F1> :lcd %:p:h <CR>
 	nnoremap <leader>n :NERDTreeToggle <CR>
 	nnoremap <leader>t :TagbarToggle <CR>
 	nnoremap <leader>jt :NeoTexOn <CR>
-	autocmd BufEnter *.md exe 'nnoremap <leader>md :!open -a "Shiba" %:p<CR>'
 	autocmd GUIEnter * set t_vb=
 	autocmd GUIEnter * WToggleClean
    	imap jk <ESC> <CR>
@@ -33,7 +38,8 @@ nnoremap <F1> :lcd %:p:h <CR>
 "Vim_Plug
 call plug#begin('~/.local/share/nvim/site/autoload/')
 
-	Plug 'mhartington/oceanic-next'
+	Plug 'junegunn/goyo.vim'
+	Plug 'joshdick/onedark.vim'
 	Plug 'donRaphaco/neotex', { 'for': 'tex'}
 	Plug 'roxma/nvim-completion-manager'
 	Plug 'dylanaraps/wal.vim'
@@ -56,23 +62,28 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
+	Plug 'altercation/vim-colors-solarized'
 	Plug 'ervandew/supertab'
 
 call plug#end()
 
+" Change VimWiki from syntax to Markdown
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 "Themes_and_Numbers
 	set nu
 	set guifont=Source\ Code\ Pro:h12		"Font size change for GVim
 	set foldmethod=indent
-	" colorscheme wal
 	set cursorline
 	set go-=m
 	set go-=T
 	set go-=r
+	set background=dark
+	colorscheme onedark
+	set termguicolors
 	set vb t_vb=
-
+	let g:airline_theme='onedark'
+	let g:airline_solarized_bg='dark'
 	if !has("gui_running")
 		set nocursorline
 	 	inoremap <Char-0x07F> <BS>
@@ -80,7 +91,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	endif
     
 "SNIPPETS
-" let g:UltiSnipsSnippetsDir='./Snippets'
 let g:UltiSnipsSnippetDirectories=['UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 set rtp^=$HOME
@@ -124,10 +134,19 @@ set completeopt+=menuone
 	set tw=80						"Set line length default as 80. Mostly for Python and sometimes AHK
 	autocmd BufNewFile,BufRead *.tex,*.txt set tw=100	"Let linelength for .tex and .txt files
 
+" Goyo Settings
+"
+	" Width x Height
+	" Goyo 120x30
+
+
 "Python Configs
 	set foldlevel=99
 	let g:SimpylFold_docstring_preview = 1
 	set clipboard=unnamed
+	" let b:ale_linters = ['flake8', 'pylint']
+	" let b:ale_fixers = ['autopep8', 'yapf']
+
 
 au BufNewFile,BufRead *.py,*ahk
 	\ set tabstop=4		|
@@ -138,4 +157,3 @@ au BufNewFile,BufRead *.py,*ahk
 	\ set autoindent	|
 	\ set fileformat=unix	|
 	\ set encoding=utf-8
-	" let python_highlight_all=1
