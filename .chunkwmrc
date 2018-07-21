@@ -1,3 +1,10 @@
+       # _                 _                                 
+   # ___| |__  _   _ _ __ | | ____      ___ __ ___  _ __ ___ 
+  # / __| '_ \| | | | '_ \| |/ /\ \ /\ / / '_ ` _ \| '__/ __|
+ # | (__| | | | |_| | | | |   <  \ V  V /| | | | | | | | (__ 
+# (_)___|_| |_|\__,_|_| |_|_|\_\  \_/\_/ |_| |_| |_|_|  \___|
+
+
 #!/bin/bash
 
 #
@@ -44,7 +51,7 @@ chunkc set global_desktop_offset_gap     25
 # NOTE: syntax for desktop-specific settings
 #
 chunkc set 2_desktop_mode                monocle
-chunkc set 5_desktop_mode                float
+# chunkc set 5_desktop_mode                float
 chunkc set 3_desktop_offset_top          40
 chunkc set 3_desktop_offset_bottom       30
 chunkc set 3_desktop_offset_left         30
