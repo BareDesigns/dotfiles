@@ -2,4 +2,5 @@
 
 Settings for my setup
 
-![Screenshot](~/Dotfiles/Screen.png)
+Screenshot:
+[Imgur](https://i.imgur.com/gUb8zHx.png)
