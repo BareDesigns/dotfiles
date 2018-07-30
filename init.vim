@@ -33,13 +33,13 @@ nnoremap <F1> :lcd %:p:h <CR>
 	nnoremap <leader>jt :NeoTexOn <CR>
 	autocmd GUIEnter * set t_vb=
 	autocmd GUIEnter * WToggleClean
+	autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
    	imap jk <ESC> <CR>
 
 "Vim_Plug
 call plug#begin('~/.local/share/nvim/site/autoload/')
 
 	Plug 'junegunn/goyo.vim'
-	Plug 'joshdick/onedark.vim'
 	Plug 'donRaphaco/neotex', { 'for': 'tex'}
 	Plug 'roxma/nvim-completion-manager'
 	Plug 'dylanaraps/wal.vim'
@@ -62,7 +62,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
-	Plug 'altercation/vim-colors-solarized'
+	Plug 'jalvesaq/Nvim-R'
 	Plug 'ervandew/supertab'
 
 call plug#end()
@@ -79,8 +79,9 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set go-=T
 	set go-=r
 	set background=dark
-	colorscheme onedark
-	set termguicolors
+	" colorscheme onedark
+	" colorsheme wal
+	" set termguicolors
 	set vb t_vb=
 	let g:airline_theme='onedark'
 	let g:airline_solarized_bg='dark'
