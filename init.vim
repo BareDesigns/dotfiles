@@ -79,9 +79,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set go-=T
 	set go-=r
 	set background=dark
-	" colorscheme onedark
-	" colorsheme wal
-	" set termguicolors
+	colorscheme wal
 	set vb t_vb=
 	let g:airline_theme='onedark'
 	let g:airline_solarized_bg='dark'
@@ -134,12 +132,6 @@ set completeopt+=menuone
 	map <Space><Space> <Esc>/<++><Enter>"_c4l
 	set tw=80						"Set line length default as 80. Mostly for Python and sometimes AHK
 	autocmd BufNewFile,BufRead *.tex,*.txt set tw=100	"Let linelength for .tex and .txt files
-
-" Goyo Settings
-"
-	" Width x Height
-	" Goyo 120x30
-
 
 "Python Configs
 	set foldlevel=99
