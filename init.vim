@@ -90,7 +90,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	endif
     
 "SNIPPETS
-let g:UltiSnipsSnippetDirectories=['UltiSnips']
+let g:UltiSnipsSnippetDirectories=['~/dotfiles/Snippets/']
 let g:UltiSnipsEditSplit="vertical"
 set rtp^=$HOME
 
