@@ -6,6 +6,52 @@ snippet rpdf "PDF" i
 ---
 title: ${1:A}
 author: Jonathan Nguyen
+date: ${2:B}
 output: pdf_document
 ---
+endsnippet
+
+
+#|--------------|
+#|     HTML     |
+#|--------------|
+
+snippet rhtml "HTML" i
+---
+title: ${1:A}
+author: Jonathan Nguyen
+date: ${2:B}
+output: html_document 
+---
+endsnippet
+
+#|--------------|
+#|    Python    |
+#|--------------|
+
+snippet rpy "Python" i
+```{python}
+${1:Insert Code Here}
+```
+endsnippet
+
+#|--------------|
+#|     Code     |
+#|--------------|
+
+snippet rcode "Code" i
+```
+${1:Insert Code Here}
+```
+endsnippet
+
+
+#|--------------|
+#|       R      |
+#|--------------|
+
+snippet rr "R Code" i
+```{r}
+${1:Insert Code Here}
+```
 endsnippet
