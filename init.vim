@@ -87,8 +87,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set vb t_vb=
 	let g:python_host_prog=('/usr/local/bin/python2.7')
 	let g:python3_host_prog=('/usr/local/bin/python3.7')
-	let g:airline_theme='onedark'
-	let g:airline_solarized_bg='dark'
+	let g:airline_theme='wal'
+	" let g:airline_solarized_bg='dark'
 	if !has("gui_running")
 		set nocursorline
 		inoremap <Char-0x07F> <BS>
@@ -99,6 +99,10 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 "SNIPPETS
 let g:UltiSnipsSnippetsDir = "~/UltiSnips/"
 set rtp^=$HOME
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 
 "LATEX
 	filetype plugin on
