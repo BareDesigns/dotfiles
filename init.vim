@@ -35,16 +35,14 @@ nnoremap <F1> :lcd %:p:h <CR>
 	autocmd GUIEnter * WToggleClean
 	autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
    	imap jk <ESC> <CR>
+	autocmd BufEnter * call ncm2#enable_for_buffer()
+	set completeopt=noinsert,menuone,noselect
 
 "Vim_Plug
 call plug#begin('~/.local/share/nvim/site/autoload/')
 
 	Plug 'junegunn/goyo.vim'
 	Plug 'donRaphaco/neotex', { 'for': 'tex'}
-	" Plug 'roxma/nvim-completion-manager'
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
 	Plug 'dylanaraps/wal.vim'
 	Plug 'tmhedberg/SimpylFold' 
 	Plug 'vim-scripts/indentpython'
@@ -55,7 +53,8 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'
-	" Plug 'SirVer/ultisnips'
+	Plug 'SirVer/ultisnips'
+	Plug 'ncm2/ncm2-ultisnips'
 	Plug 'majutsushi/tagbar'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
@@ -66,7 +65,9 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
 	Plug 'jalvesaq/Nvim-R'
-	" Plug 'ervandew/supertab'
+	Plug 'ervandew/supertab'
+	Plug 'ncm2/ncm2'
+	Plug 'roxma/nvim-yarp'
 
 call plug#end()
 
@@ -78,49 +79,26 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set guifont=Source\ Code\ Pro:h12		"Font size change for GVim
 	set foldmethod=indent
 	set cursorline
-	let g:python3_host_prog = '/usr/local/bin/python3.7'
 	set go-=m
 	set go-=T
 	set go-=r
 	set background=dark
-	let g:deoplete#enable_at_startup = 1
 	colorscheme wal
 	set vb t_vb=
+	let g:python_host_prog=('/usr/local/bin/python2.7')
+	let g:python3_host_prog=('/usr/local/bin/python3.7')
 	let g:airline_theme='onedark'
 	let g:airline_solarized_bg='dark'
 	if !has("gui_running")
 		set nocursorline
-	 	inoremap <Char-0x07F> <BS>
-	 	nnoremap <Char-0x07F> <BS>
+		inoremap <Char-0x07F> <BS>
+		nnoremap <Char-0x07F> <BS>
 	endif
-	call remote#host#RegisterPlugin('python3', '/home/shougo/work/deoplete.nvim/rplugin/python3/deoplete.py', [
-      \ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
-     \ ])
+
     
 "SNIPPETS
-" let g:UltiSnipsSnippetDirectories=['~/dotfiles/Snippets/']
-let g:UltiSnipsSnippetDirectories=['/UltiSnips']
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir = "~/UltiSnips/"
 set rtp^=$HOME
-
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-"au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-set completeopt+=menuone
 
 "LATEX
 	filetype plugin on
