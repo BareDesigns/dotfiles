@@ -48,6 +48,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-scripts/indentpython'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-commentary'
+	Plug 'altercation/vim-colors-solarized'
 	Plug 'w0rp/ale'
 	Plug 'vimwiki/vimwiki'
 	Plug 'vim-airline/vim-airline'
