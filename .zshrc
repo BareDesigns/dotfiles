@@ -53,11 +53,15 @@ alias vrc="sudo nvim ~/.config/nvim/init.vim"
 alias gty="gtypist"
 alias pip3="python3.7 -m pip"
 
+
 # GIT
 alias gs="git status"
 alias gc="git commit -m"
-alias gpl="git pull origin master"
-alias gpu="git push origin master"
+alias gplo="git pull origin master"
+alias gpuo="git push origin master"
+alias gplg="git pull origin master"
+alias gpug="git push origin master"
+
 
 # TaskWarrior
 alias tk="task"
@@ -66,6 +70,7 @@ alias taw="task add project:work"
 alias tap="task add project:personal"
 alias tas="task add project:school"
 alias tc="task context"
+
 
 # Youtube-DL
 alias yty="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'" 
