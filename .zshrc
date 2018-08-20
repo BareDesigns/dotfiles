@@ -59,8 +59,8 @@ alias gs="git status"
 alias gc="git commit -m"
 alias gplo="git pull origin master"
 alias gpuo="git push origin master"
-alias gplg="git pull origin master"
-alias gpug="git push origin master"
+alias gplg="git pull github"
+alias gpug="git push github"
 
 
 # TaskWarrior
