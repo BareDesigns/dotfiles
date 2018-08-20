@@ -66,7 +66,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
 	Plug 'jalvesaq/Nvim-R'
-	Plug 'ervandew/supertab'
+	" Plug 'ervandew/supertab'
 	Plug 'ncm2/ncm2'
 	Plug 'roxma/nvim-yarp'
 
