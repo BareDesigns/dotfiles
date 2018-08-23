@@ -24,19 +24,21 @@ nnoremap <F1> :lcd %:p:h <CR>
 	map <Space> <leader>
 	let mapleader = "\<Space>"
 	nnoremap = :w! <CR>
-	nnoremap <LEADER>gs :Gstatus <cr>
-	nnoremap <leader>gc :Gcommit <CR>
-	nnoremap <leader>gp :Gpush <CR>
-	nnoremap <leader>q :q <CR>
+	" nnoremap <LEADER>gs :Gstatus <cr>
+	" nnoremap <leader>gc :Gcommit <CR>
+	" nnoremap <leader>gp :Gpush <CR>
+	" nnoremap <leader>q :q <CR>
 	nnoremap <leader>n :NERDTreeToggle <CR>
 	nnoremap <leader>t :TagbarToggle <CR>
 	nnoremap <leader>jt :NeoTexOn <CR>
+	nnoremap <leader>z ]s <CR>
 	autocmd GUIEnter * set t_vb=
 	autocmd GUIEnter * WToggleClean
-	autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
    	imap jk <ESC> <CR>
 	autocmd BufEnter * call ncm2#enable_for_buffer()
 	set completeopt=noinsert,menuone,noselect
+	let g:SuperTabDefaultCompletionType = "<c-n>"
+
 
 "Vim_Plug
 call plug#begin('~/.local/share/nvim/site/autoload/')
@@ -66,9 +68,10 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
 	Plug 'jalvesaq/Nvim-R'
-	" Plug 'ervandew/supertab'
+	Plug 'ervandew/supertab'
 	Plug 'ncm2/ncm2'
 	Plug 'roxma/nvim-yarp'
+	Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -84,12 +87,12 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set go-=T
 	set go-=r
 	set background=dark
-	colorscheme wal
+	colorscheme solarized
 	set vb t_vb=
 	let g:python_host_prog=('/usr/local/bin/python2.7')
 	let g:python3_host_prog=('/usr/local/bin/python3.7')
-	let g:airline_theme='wal'
-	" let g:airline_solarized_bg='dark'
+	" let g:airline_theme='wal'
+	let g:airline_solarized_bg='dark'
 	if !has("gui_running")
 		set nocursorline
 		inoremap <Char-0x07F> <BS>
