@@ -72,6 +72,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'ncm2/ncm2'
 	Plug 'roxma/nvim-yarp'
 	Plug 'joshdick/onedark.vim'
+	Plug 'tpope/vim-surround'
 
 call plug#end()
 
