@@ -52,6 +52,7 @@ alias vi="nvim"
 alias vrc="sudo nvim ~/.config/nvim/init.vim"
 alias gty="gtypist"
 alias pip3="python3.7 -m pip"
+alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 40% --backend iterm2'
 
 
 # GIT
