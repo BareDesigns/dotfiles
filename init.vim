@@ -24,6 +24,7 @@ nnoremap <F1> :lcd %:p:h <CR>
 	map <Space> <leader>
 	let mapleader = "\<Space>"
 	nnoremap = :w! <CR>
+	nnoremap <leader>q :q <CR>
 	" nnoremap <LEADER>gs :Gstatus <cr>
 	" nnoremap <leader>gc :Gcommit <CR>
 	" nnoremap <leader>gp :Gpush <CR>
@@ -57,7 +58,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'SirVer/ultisnips'
-	Plug 'ncm2/ncm2-ultisnips'
+	" Plug 'ncm2/ncm2-ultisnips'
 	Plug 'majutsushi/tagbar'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
@@ -67,7 +68,6 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vim-pandoc/vim-rmarkdown'
-	Plug 'jalvesaq/Nvim-R'
 	Plug 'ervandew/supertab'
 	Plug 'ncm2/ncm2'
 	Plug 'roxma/nvim-yarp'
