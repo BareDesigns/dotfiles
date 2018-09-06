@@ -25,14 +25,10 @@ nnoremap <F1> :lcd %:p:h <CR>
 	let mapleader = "\<Space>"
 	nnoremap = :w! <CR>
 	nnoremap <leader>q :q <CR>
-	" nnoremap <LEADER>gs :Gstatus <cr>
-	" nnoremap <leader>gc :Gcommit <CR>
-	" nnoremap <leader>gp :Gpush <CR>
-	" nnoremap <leader>q :q <CR>
 	nnoremap <leader>n :NERDTreeToggle <CR>
 	nnoremap <leader>t :TagbarToggle <CR>
 	nnoremap <leader>jt :NeoTexOn <CR>
-	nnoremap <leader>z ]s <CR>
+	nnoremap <leader>rf :RMarkdown pdf <CR>
 	autocmd GUIEnter * set t_vb=
 	autocmd GUIEnter * WToggleClean
    	imap jk <ESC> <CR>
@@ -92,7 +88,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set vb t_vb=
 	let g:python_host_prog=('/usr/local/bin/python2.7')
 	let g:python3_host_prog=('/usr/local/bin/python3.7')
-	" let g:airline_theme='wal'
+	let g:airline_theme='solarized'
 	let g:airline_solarized_bg='dark'
 	if !has("gui_running")
 		set nocursorline
