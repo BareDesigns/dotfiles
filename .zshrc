@@ -52,25 +52,17 @@ alias vi="nvim"
 alias vrc="sudo nvim ~/.config/nvim/init.vim"
 alias gty="gtypist"
 alias pip3="python3.7 -m pip"
-alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 40% --backend iterm2'
+# alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 40% --backend iterm2'
 
 
 # GIT
 alias gs="git status"
+alias gd="git difftool"
 alias gc="git commit -m"
-alias gplo="git pull origin master"
-alias gpuo="git push origin master"
-alias gplg="git pull github"
-alias gpug="git push github"
-
-
-# TaskWarrior
-alias tk="task"
-alias ta="task add"
-alias taw="task add project:work"
-alias tap="task add project:personal"
-alias tas="task add project:school"
-alias tc="task context"
+alias glo="git pull origin master"
+alias guo="git push origin master"
+alias glg="git pull github"
+alias gug="git push github"
 
 
 # Youtube-DL
