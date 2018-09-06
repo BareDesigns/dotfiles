@@ -68,6 +68,7 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'ncm2/ncm2'
 	Plug 'roxma/nvim-yarp'
 	Plug 'joshdick/onedark.vim'
+	Plug 'mhartington/oceanic-next'
 	Plug 'tpope/vim-surround'
 
 call plug#end()
@@ -84,7 +85,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set go-=T
 	set go-=r
 	set background=dark
-	colorscheme solarized
+	colorscheme OceanicNext
 	set vb t_vb=
 	let g:python_host_prog=('/usr/local/bin/python2.7')
 	let g:python3_host_prog=('/usr/local/bin/python3.7')
