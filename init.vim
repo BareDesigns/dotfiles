@@ -41,6 +41,7 @@ nnoremap <F1> :lcd %:p:h <CR>
 call plug#begin('~/.local/share/nvim/site/autoload/')
 
 	Plug 'junegunn/goyo.vim'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'donRaphaco/neotex', { 'for': 'tex'}
 	Plug 'dylanaraps/wal.vim'
 	Plug 'tmhedberg/SimpylFold' 
@@ -85,7 +86,8 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set go-=T
 	set go-=r
 	set background=dark
-	colorscheme OceanicNext
+	set termguicolors
+	colorscheme dracula
 	set vb t_vb=
 	let g:python_host_prog=('/usr/local/bin/python2.7')
 	let g:python3_host_prog=('/usr/local/bin/python3.7')
