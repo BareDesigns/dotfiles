@@ -46,21 +46,17 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'dylanaraps/wal.vim'
 	Plug 'tmhedberg/SimpylFold' 
 	Plug 'vim-scripts/indentpython'
-	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-commentary'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'w0rp/ale'
 	Plug 'vimwiki/vimwiki'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'
+	Plug 'itchyny/lightline.vim'
 	Plug 'SirVer/ultisnips'
-	" Plug 'ncm2/ncm2-ultisnips'
 	Plug 'majutsushi/tagbar'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
         Plug 'maralla/completor.vim'
-	Plug 'airblade/vim-gitgutter'
 	Plug 'Yggdroot/indentLine'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -68,8 +64,6 @@ call plug#begin('~/.local/share/nvim/site/autoload/')
 	Plug 'ervandew/supertab'
 	Plug 'ncm2/ncm2'
 	Plug 'roxma/nvim-yarp'
-	Plug 'joshdick/onedark.vim'
-	Plug 'mhartington/oceanic-next'
 	Plug 'tpope/vim-surround'
 
 call plug#end()
@@ -91,13 +85,33 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 	set vb t_vb=
 	let g:python_host_prog=('/usr/local/bin/python2.7')
 	let g:python3_host_prog=('/usr/local/bin/python3.7')
-	let g:airline_theme='solarized'
-	let g:airline_solarized_bg='dark'
 	if !has("gui_running")
 		set nocursorline
 		inoremap <Char-0x07F> <BS>
 		nnoremap <Char-0x07F> <BS>
 	endif
+
+"Lightline
+let g:lightline = {
+  \   'colorscheme': 'Dracula',
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+	\   'component': {
+	\     'lineinfo': ' %3l:%-2v',
+	\   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+let g:lightline.separator = {
+	\   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+	\   'left': '', 'right': '' 
+  \}
 
     
 "SNIPPETS
