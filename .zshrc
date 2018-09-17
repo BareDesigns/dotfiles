@@ -44,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls="colorls"
 alias ei="exit"
 alias tt="tmux"
-alias reddit="rtv"
+alias rtv="rtv --enable-media"
 alias py="python3.7"
 alias bb="cd -"
 alias rfo="rm -rf"
@@ -52,8 +52,18 @@ alias vi="nvim"
 alias vrc="sudo nvim ~/.config/nvim/init.vim"
 alias gty="gtypist"
 alias pip3="python3.7 -m pip"
-alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 40% --backend iterm2'
+alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 35% --backend iterm2'
+alias p2up='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
+alias p3up='python3.7 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 python3.7 -m pip install -U'
 
+
+# Taskwarrior
+alias ta="task add"
+alias tl="task list"
+alias tc="task context"
+alias taw="task add project:work"
+alias tap="task add project:personal"
+alias tas="task add project:school"
 
 # GIT
 alias gs="git status"

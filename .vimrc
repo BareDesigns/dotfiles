@@ -28,6 +28,7 @@ nnoremap <F1> :lcd %:p:h <CR>
 	nnoremap <leader>q :q <CR>
 	nnoremap <leader>n :NERDTreeToggle <CR>
 	nnoremap <leader>t :TagbarToggle <CR>
+	nnoremap <shift>Enter :colorscheme default <CR>
 	autocmd GUIEnter * set t_vb=
 	autocmd GUIEnter * WToggleClean
    	imap jk <ESC> <CR>
@@ -76,9 +77,9 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
         let g:indentLine_char = '|'
 
 "NERDTREE Settings
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 	if !has("gui_running")

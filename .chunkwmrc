@@ -38,7 +38,7 @@ chunkc set global_desktop_offset_right   25
 chunkc set global_desktop_offset_gap     25
 
 # NOTE: syntax for desktop-specific settings
-chunkc set 2_desktop_mode                monocle
+chunkc set 2_desktop_mode                bsp
 chunkc set 3_desktop_offset_top          40
 chunkc set 3_desktop_offset_bottom       30
 chunkc set 3_desktop_offset_left         30
