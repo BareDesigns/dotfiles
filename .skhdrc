@@ -67,8 +67,8 @@ shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1; qes -k "cmd + alt -
 shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2; qes -k "cmd + alt - 2"
 shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3; qes -k "cmd + alt - 3"
 # shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4; qes -k "cmd + alt - 4"
-shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; qes -k "cmd + alt - 5"
-shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; qes -k "cmd + alt - 6"
+# shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; qes -k "cmd + alt - 5"
+# shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; qes -k "cmd + alt - 6"
 
 # focus monitor
 ctrl + alt - z  : chunkc tiling::monitor -f prev
