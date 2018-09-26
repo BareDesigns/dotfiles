@@ -1,4 +1,40 @@
 #|----------------------|
+#|      Formats         |
+#|----------------------|
+
+snippet btex "Basic" i
+\documentclass{article}
+
+
+\title{${1:TITLE HERE}}
+\author{${2:TITLE HERE}}
+
+\begin{document}
+
+\maketitle
+
+${3:START HERE}
+
+\end{document}
+endsnippet
+
+snippet mtex "Basic" i
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{${1:TITLE HERE}}
+\author{${2:TITLE HERE}}
+
+\begin{document}
+
+\maketitle
+
+${3:START HERE}
+
+\end{document}
+endsnippet
+
+#|----------------------|
 #|      Formatting      |
 #|----------------------|
 
