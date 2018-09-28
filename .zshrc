@@ -55,6 +55,7 @@ alias pip3="python3.7 -m pip"
 alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 35% --backend iterm2'
 alias p2up='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias p3up='python3.7 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 python3.7 -m pip install -U'
+alias wkt='vi Dropbox/vimwiki/Workouts.md'
 
 
 # Taskwarrior
@@ -67,7 +68,7 @@ alias tas="task add project:school"
 
 # GIT
 alias gs="git status"
-alias gd="git difftool"
+alias gd="nvim -d"
 alias gc="git commit -m"
 alias glo="git pull origin master"
 alias guo="git push origin master"
