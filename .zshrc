@@ -80,6 +80,7 @@ alias gug="git push github"
 alias yty="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'" 
 alias ytu="youtube-dl -o '~/MyVideos/%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s'"
 alias ydl="youtube-dl "
+alias ydll="youtube-dl -u 'jonathan.nguyen7@gmail.com' -p 'qgnoyuafqwuxpllq' "
 alias ymp3="youtube-dl --extract-audio --audio-format mp3 "
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

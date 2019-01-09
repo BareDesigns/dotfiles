@@ -111,3 +111,4 @@ chunkc core::unload ffm.so
 
 chunkc tiling::rule --owner Finder --name Copy --state float &
 chunkc tiling::rule --owner \"App Store\" --state float &
+chunkc tiling::rule --owner \"Friendly Streaming\" --state float &
