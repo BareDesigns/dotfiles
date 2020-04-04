@@ -32,7 +32,7 @@ export UPDATE_ZSH_DAYS=5
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  git
+  git python vscode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -57,6 +57,7 @@ alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 
 alias p2up='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias p3up='python3.7 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 python3.7 -m pip install -U'
 alias wkt='vi Dropbox/vimwiki/Workouts.md'
+alias pi="ssh jonphinguyen@192.168.1.25"
 
 
 # Taskwarrior
@@ -76,12 +77,19 @@ alias guo="git push origin master"
 alias glg="git pull github"
 alias gug="git push github"
 
+# Brew
+
+alias bu="brew upgrade"
+alias bc="brew cleanup"
+alias bcu="brew cask upgrade"
 
 # Youtube-DL
 alias yty="youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'" 
 alias ytu="youtube-dl -o '~/MyVideos/%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s'"
-alias ydl="youtube-dl "
-alias ydll="youtube-dl -u 'jonathan.nguyen7@gmail.com' -p 'qgnoyuafqwuxpllq' "
+alias ydl="youtube-dl --prefer-ffmpeg --merge-output-format mkv "
 alias ymp3="youtube-dl --extract-audio --audio-format mp3 "
+alias wgetMKV='wget -A "*.mp3" -r'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/usr/local/sbin:$PATH"
+source /usr/local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
