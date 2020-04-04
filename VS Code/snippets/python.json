@@ -1,83 +1,74 @@
 {
-
-"Print": {
-	"prefix": "uu",
-	"body": [
-		"print($1)"
-	],
-	"description": "Print"
-},
-
-"While": {
-	"prefix": "wl",
-	"body": [
-		"while $1:",
-		"\t$0"
-	],
-	"description": "While"
-},
-
-"Function": {
-	"prefix": "df",
-	"body": [
-	  "def $1($2):",
-	  "    ```$3```",
-	  "    $0"
-	],
-	"description": "Function"
-},
-
-"Class": {
-	"prefix": "clss",
-	"body": [
-	  "class $1:",
-	  "    ```$2```",
-	  "    def __init__(self, $3):",
-	  "        $0"
-	],
-	"description": "Class"
-  },
-
-  "If": {
-	"prefix": "ff",
-	"body": [
-	  "if $1:",
-	  "    $0"
-	],
-	"description": "If"
-  },
-
-  "If/Else": {
-	"prefix": "ie",
-	"body": [
-	  "if $1:",
-	  "    $2",
-	  "else:",
-	  "    $0"
-	],
-	"description": "If/Else"
-  },
-
-  "For": {
-	"prefix": "fr",
-	"body": [
-	  "for $1 in $2:",
-	  "    $0"
-	],
-	"description": "For"
-  },
-
-  "If/Else if/Else": {
-	"prefix": "il",
-	"body": [
-	  "if $1:",
-	  "    $2",
-	  "elif $3:",
-	  "    $4",
-	  "else $5:",
-	  "    $0"
-	],
-	"description": "If/Else if/Else"
-  }
-
+	"Print": {
+		"prefix": "uu",
+		"body": [
+			"print($1)"
+		],
+		"description": "Print"
+	},
+	"While": {
+		"prefix": "wl",
+		"body": [
+			"while $1:",
+			"\t$0"
+		],
+		"description": "While"
+	},
+	"Function": {
+		"prefix": "fun",
+		"body": [
+			"def $1($2):",
+			"    ```$3```",
+			"    $0"
+		],
+		"description": "Function"
+	},
+	"Class": {
+		"prefix": "clss",
+		"body": [
+			"class $1:",
+			"    ```$2```",
+			"    def __init__(self, $3):",
+			"        $0"
+		],
+		"description": "Class"
+	},
+	"If": {
+		"prefix": "ii",
+		"body": [
+			"if $1:",
+			"    $0"
+		],
+		"description": "If"
+	},
+	"If/Else": {
+		"prefix": "ie",
+		"body": [
+			"if $1:",
+			"    $2",
+			"else:",
+			"    $0"
+		],
+		"description": "If/Else"
+	},
+	"For": {
+		"prefix": "ff",
+		"body": [
+			"for $1 in $2:",
+			"    $0"
+		],
+		"description": "For"
+	},
+	"If/Else if/Else": {
+		"prefix": "il",
+		"body": [
+			"if $1:",
+			"    $2",
+			"elif $3:",
+			"    $4",
+			"else $5:",
+			"    $0"
+		],
+		"description": "If/Else if/Else"
+	}
 }
