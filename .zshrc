@@ -1,7 +1,7 @@
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jonphinguyen/.oh-my-zsh
+export ZSH="/Users/jon/.oh-my-zsh"
 
 # Set name of the theme to load.
 ZSH_THEME="robbyrussell"
@@ -49,33 +49,24 @@ alias py="python3.7"
 alias python="python3.7"
 alias bb="cd -"
 alias rfo="rm -rf"
-alias vi="nvim"
 alias vrc="sudo nvim ~/.config/nvim/init.vim"
 alias gty="gtypist"
 alias pip3="python3.7 -m pip"
 alias neofetch='neofetch --source ~/dotfiles/Wallpapers/Wife\ Glitch.png --size 35% --backend iterm2'
 alias p2up='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias p3up='python3.7 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 python3.7 -m pip install -U'
-alias wkt='vi Dropbox/vimwiki/Workouts.md'
-alias pi="ssh jonphinguyen@192.168.1.25"
 
-
-# Taskwarrior
-alias ta="task add"
-alias tl="task list"
-alias tc="task context"
-alias taw="task add project:work"
-alias tap="task add project:personal"
-alias tas="task add project:school"
+# BREW
+alias bw="brew upgrade | brew cask upgrade | brew cleanup"
 
 # GIT
-alias gs="git status"
-alias gd="nvim -d"
-alias gc="git commit -m"
-alias glo="git pull origin master"
-alias guo="git push origin master"
-alias glg="git pull github"
-alias gug="git push github"
+# alias gs="git status"
+# alias gd="nvim -d"
+# alias gc="git commit -m"
+# alias glo="git pull origin master"
+# alias guo="git push origin master"
+# alias glg="git pull github"
+# alias gug="git push github"
 
 # Brew
 
@@ -92,4 +83,4 @@ alias wgetMKV='wget -A "*.mp3" -r'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/sbin:$PATH"
-source /usr/local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
